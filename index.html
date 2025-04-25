@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Homepage</title>
+    <title>Personal Homepage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Academic Homepage</div>
+            <div class="logo">Personal Homepage</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#interests">Interests</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -27,78 +25,53 @@
             <div class="hero-content">
                 <img src="pigeon.jpg" alt="Profile Photo" class="profile-image">
                 <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
-                <p class="subtitle">[Your Major] · Student · Researcher</p>
+                <p class="subtitle">[Your Title/Role]</p>
                 <div class="hero-bio">
-                    <p>Welcome to my personal homepage! Here you'll find my academic research, personal interests, and life moments. I love exploring the unknown while enjoying the little joys in life.</p>
+                    <p>Welcome to my personal homepage! I'm passionate about [your interests]. This site serves as a gateway to explore different aspects of my life and work.</p>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="research">
-            <h2>Research Areas</h2>
-            <div class="research-content">
-                <div class="research-card">
-                    <h3>Research Area 1</h3>
-                    <p>Detailed description of your first research area, including your interests, goals, and methodologies.</p>
-                </div>
-                <div class="research-card">
-                    <h3>Research Area 2</h3>
-                    <p>Detailed description of your second research area, including your interests, goals, and methodologies.</p>
-                </div>
-            </div>
-        </section>
+        <!-- 页面链接区域 -->
+        <section class="page-links">
+            <!-- 学术页面链接 -->
+            <a href="academic.html" class="page-link">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Academic</h3>
+                <p>Explore my research and academic work</p>
+            </a>
 
-        <section id="publications" class="publications">
-            <h2>Publications</h2>
-            <div class="publication-list">
-                <div class="publication-item">
-                    <h3>Paper Title</h3>
-                    <p class="authors">Author List</p>
-                    <p class="journal">Journal Name, Year</p>
-                    <a href="#" class="paper-link">View Full Text <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <!-- Add more publications here -->
-            </div>
-        </section>
+            <!-- 游戏页面链接 -->
+            <a href="gaming.html" class="page-link">
+                <i class="fas fa-gamepad"></i>
+                <h3>Gaming</h3>
+                <p>Check out my gaming experiences</p>
+            </a>
 
-        <section id="interests" class="interests">
-            <h2>Interests</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Food Exploration</h3>
-                    <p>Sharing my recent food discoveries and cooking experiences, documenting delicious moments in life.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-book"></i>
-                    <h3>Reading</h3>
-                    <p>Current reads and reading notes, sharing thoughts and insights from books.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-camera"></i>
-                    <h3>Photography</h3>
-                    <p>Capturing beautiful moments in life through my lens, documenting daily joys.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-hiking"></i>
-                    <h3>Outdoor Activities</h3>
-                    <p>Enjoying hiking, cycling, and other outdoor activities, experiencing the beauty of nature.</p>
-                </div>
-            </div>
+            <!-- 运动页面链接 -->
+            <a href="sports.html" class="page-link">
+                <i class="fas fa-running"></i>
+                <h3>Sports</h3>
+                <p>Discover my sports activities</p>
+            </a>
+
+            <!-- 添加新页面的示例 -->
+            <!-- 
+            <a href="new-page.html" class="page-link">
+                <i class="fas fa-[icon-name]"></i>
+                <h3>New Page</h3>
+                <p>Description of the new page</p>
+            </a>
+            -->
         </section>
 
         <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <div class="contact-content">
-                <div class="social-links">
-                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> [Your Institution]</p>
-                    <p><i class="fas fa-envelope"></i> [Your Email]</p>
-                </div>
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </section>
     </main>
@@ -106,7 +79,5 @@
     <footer>
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html> 
