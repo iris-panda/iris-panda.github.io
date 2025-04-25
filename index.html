@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人网站</title>
+    <title>我的学术主页</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">个人网站</div>
+            <div class="logo">学术主页</div>
             <ul class="nav-links">
                 <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#projects">项目</a></li>
+                <li><a href="#research">研究</a></li>
+                <li><a href="#publications">论文</a></li>
+                <li><a href="#interests">兴趣</a></li>
                 <li><a href="#contact">联系我</a></li>
             </ul>
         </nav>
@@ -23,34 +24,58 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>欢迎来到我的个人网站</h1>
-                <p>简约 · 优雅 · 专业</p>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>关于我</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>这里可以添加你的个人简介...</p>
+                <h1>你好，我是<span class="highlight">[你的名字]</span></h1>
+                <p class="subtitle">[你的专业] · 学生 · 研究者</p>
+                <div class="hero-bio">
+                    <p>欢迎来到我的个人主页！这里记录了我的学术研究、兴趣爱好和生活点滴。</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects">
-            <h2>我的项目</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>项目 1</h3>
-                    <p>项目描述...</p>
+        <section id="research" class="research">
+            <h2>研究领域</h2>
+            <div class="research-content">
+                <div class="research-card">
+                    <h3>研究方向一</h3>
+                    <p>研究方向一的详细描述...</p>
                 </div>
-                <div class="project-card">
-                    <h3>项目 2</h3>
-                    <p>项目描述...</p>
+                <div class="research-card">
+                    <h3>研究方向二</h3>
+                    <p>研究方向二的详细描述...</p>
                 </div>
-                <div class="project-card">
-                    <h3>项目 3</h3>
-                    <p>项目描述...</p>
+            </div>
+        </section>
+
+        <section id="publications" class="publications">
+            <h2>发表论文</h2>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <h3>论文标题</h3>
+                    <p class="authors">作者列表</p>
+                    <p class="journal">期刊名称, 年份</p>
+                    <a href="#" class="paper-link">查看全文</a>
+                </div>
+                <!-- 可以添加更多论文 -->
+            </div>
+        </section>
+
+        <section id="interests" class="interests">
+            <h2>兴趣爱好</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>美食探索</h3>
+                    <p>分享我最近发现的美食和烹饪心得</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-book"></i>
+                    <h3>阅读</h3>
+                    <p>最近在读的书和读书笔记</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>摄影</h3>
+                    <p>用镜头记录生活的美好瞬间</p>
                 </div>
             </div>
         </section>
@@ -59,22 +84,20 @@
             <h2>联系我</h2>
             <div class="contact-content">
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="你的名字">
-                    <input type="email" placeholder="你的邮箱">
-                    <textarea placeholder="你的留言"></textarea>
-                    <button type="submit">发送</button>
-                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> [你的学校/机构]</p>
+                    <p><i class="fas fa-envelope"></i> [你的邮箱]</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 个人网站. All rights reserved.</p>
+        <p>&copy; 2024 [你的名字]. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
