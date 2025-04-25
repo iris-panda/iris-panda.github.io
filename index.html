@@ -15,9 +15,7 @@
             <button class="menu-button">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="logo">
-                <img src="pigeon.jpg" alt="Logo">
-            </div>
+            <div class="logo">Rentang Liu</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="academic.html">Academic</a></li>
@@ -51,21 +49,38 @@
 
         <section id="contact" class="contact">
             <div class="social-links">
+                <!-- 社交媒体链接 - 按需修改链接地址 -->
+                <a href="#" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="#" title="X (Twitter)">
+                    <i class="fab fa-x-twitter"></i>
+                    <span>X</span>
+                </a>
+                <a href="#" title="Bilibili">
+                    <i class="fab fa-bilibili"></i>
+                    <span>Bilibili</span>
+                </a>
                 <a href="#" title="GitHub">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="#" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="#" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                    <span>Twitter</span>
-                </a>
                 <a href="#" title="Email">
                     <i class="fas fa-envelope"></i>
                     <span>Email</span>
+                </a>
+                <a href="#" title="Xiaohongshu">
+                    <i class="fas fa-book"></i>
+                    <span>小红书</span>
+                </a>
+                <a href="#" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
                 </a>
             </div>
         </section>
@@ -76,7 +91,7 @@
     </footer>
 
     <script>
-        // 导航栏滚动效果
+        // ===== 导航栏滚动效果 =====
         let lastScrollTop = 0;
         const header = document.querySelector('header');
 
@@ -84,25 +99,26 @@
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
             if (scrollTop > lastScrollTop) {
-                // 向下滚动
+                // 向下滚动时隐藏导航栏
                 header.classList.add('hide');
             } else {
-                // 向上滚动
+                // 向上滚动时显示导航栏
                 header.classList.remove('hide');
             }
             
             lastScrollTop = scrollTop;
         });
 
-        // 侧边栏切换
+        // ===== 侧边栏功能 =====
         const menuButton = document.querySelector('.menu-button');
         const sidebar = document.querySelector('.sidebar');
 
+        // 点击菜单按钮切换侧边栏
         menuButton.addEventListener('click', () => {
             sidebar.classList.toggle('active');
         });
 
-        // 点击侧边栏外部关闭侧边栏
+        // 点击侧边栏外部区域关闭侧边栏
         document.addEventListener('click', (e) => {
             if (!sidebar.contains(e.target) && !menuButton.contains(e.target)) {
                 sidebar.classList.remove('active');
