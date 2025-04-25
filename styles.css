@@ -6,27 +6,30 @@
 }
 
 :root {
-    --primary-color: #2c7be5;
-    --secondary-color: #6c757d;
-    --accent-color: #ff9f43;
-    --text-color: #2d3748;
-    --light-bg: #f8f9fa;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --gradient-start: #f6f9fc;
-    --gradient-end: #e9ecef;
+    --primary-color: #6366f1;
+    --secondary-color: #64748b;
+    --accent-color: #f59e0b;
+    --text-color: #1e293b;
+    --light-bg: #f8fafc;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --gradient-start: #e0e7ff;
+    --gradient-end: #c7d2fe;
+    --neon-glow: 0 0 10px rgba(99, 102, 241, 0.5);
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 /* 导航栏样式 */
 header {
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--card-shadow);
     position: fixed;
     width: 100%;
     top: 0;
@@ -46,6 +49,7 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    text-shadow: var(--neon-glow);
 }
 
 .nav-links {
@@ -60,12 +64,24 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
-    transition: color 0.3s;
+    transition: all 0.3s ease;
     font-weight: 500;
+    position: relative;
 }
 
-.nav-links a:hover {
-    color: var(--accent-color);
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* 英雄区域样式 */
@@ -88,8 +104,15 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23ff9f43" opacity="0.1"/></svg>') repeat;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%236366f1" opacity="0.1"/></svg>') repeat;
     opacity: 0.1;
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }
 
 .hero-content {
@@ -98,11 +121,25 @@ nav {
     z-index: 1;
 }
 
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    border: 5px solid var(--primary-color);
+    box-shadow: var(--neon-glow);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: var(--neon-glow);
 }
 
 .highlight {
@@ -135,6 +172,7 @@ nav {
     margin-bottom: 3rem;
     font-size: 2.5rem;
     color: var(--primary-color);
+    text-shadow: var(--neon-glow);
 }
 
 .research-content {
@@ -152,6 +190,18 @@ nav {
     box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
     border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.research-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
 .research-card:hover {
@@ -169,6 +219,7 @@ nav {
     margin-bottom: 3rem;
     font-size: 2.5rem;
     color: var(--primary-color);
+    text-shadow: var(--neon-glow);
 }
 
 .publication-list {
@@ -212,10 +263,12 @@ nav {
     font-weight: 500;
     display: inline-block;
     margin-top: 1rem;
+    transition: all 0.3s ease;
 }
 
 .paper-link:hover {
     text-decoration: underline;
+    transform: translateX(5px);
 }
 
 /* 兴趣爱好部分样式 */
@@ -229,6 +282,7 @@ nav {
     margin-bottom: 3rem;
     font-size: 2.5rem;
     color: var(--primary-color);
+    text-shadow: var(--neon-glow);
 }
 
 .interests-grid {
@@ -247,6 +301,18 @@ nav {
     text-align: center;
     transition: all 0.3s ease;
     border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
 .interest-card:hover {
@@ -258,11 +324,11 @@ nav {
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .interest-card:hover i {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
 }
 
 .interest-card h3 {
@@ -280,6 +346,7 @@ nav {
     margin-bottom: 3rem;
     font-size: 2.5rem;
     color: var(--primary-color);
+    text-shadow: var(--neon-glow);
 }
 
 .contact-content {
@@ -297,11 +364,12 @@ nav {
     font-size: 2rem;
     margin: 0 1rem;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .social-links a:hover {
     color: var(--accent-color);
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(5deg);
 }
 
 .contact-info {
@@ -324,6 +392,19 @@ footer {
     padding: 2rem;
     background-color: var(--primary-color);
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    opacity: 0.1;
 }
 
 /* 响应式设计 */
