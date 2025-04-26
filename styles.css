@@ -20,6 +20,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     padding-top: var(--nav-height);
+    font-size: 1.9rem;
 }
 
 h1, h2, h3 {
@@ -177,7 +178,7 @@ main {
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     color: var(--text-color);
     margin-bottom: 2rem;
 }
@@ -237,7 +238,7 @@ main {
 /* 导航提示文本样式 */
 .nav-reminder {
     font-family: 'Arial', sans-serif;
-    font-size: 1.95rem;
+    font-size: 1.3rem;
     color: #000;
     margin: 1.2rem 0;
     text-align: center;
