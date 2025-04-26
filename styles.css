@@ -181,6 +181,18 @@ main {
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.1rem;
+    padding-left: 4rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.hero-bio p {
+    margin: 0;
+    text-indent: 0;
+}
+
+.hero-bio p + p {
+    margin-top: 1.5rem;
 }
 
 /* 页面链接区域 */
