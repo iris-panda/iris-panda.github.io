@@ -230,11 +230,11 @@ main {
 /* 联系方式区域 */
 .contact {
     text-align: center;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .contact h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* 导航提示文本样式 */
@@ -258,7 +258,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.8rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .social-links a {
@@ -374,4 +374,12 @@ main {
     .sidebar.active + main {
         margin-left: 250px;
     }
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
 } 
