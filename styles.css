@@ -20,7 +20,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     padding-top: var(--nav-height);
-    font-size: 1.9rem;
+    font-size: 1.1rem;
 }
 
 h1, h2, h3 {
@@ -178,7 +178,9 @@ main {
 }
 
 .subtitle {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
     color: var(--text-color);
     margin-bottom: 2rem;
 }
